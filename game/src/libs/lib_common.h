@@ -13,6 +13,7 @@
 typedef unsigned int usec_t;
 typedef void (*on_time_t)(usec_t);
 typedef void (*onStatePtr)(int);
+typedef void (*menu_run)(int);
 
 
 #endif /* LIB_COMMON_H_ */

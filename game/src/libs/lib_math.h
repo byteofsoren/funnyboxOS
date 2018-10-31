@@ -10,6 +10,10 @@
 #define LIB_MATH_H_
 
 #include <math.h>
+float floatSurf[3];
+int intSurf[3];
+float floatVector[3];
+int intVector[3];
 
 /*******************************
 * lib_reflect
@@ -27,7 +31,8 @@
 *
 * Returns 1;
 *******************************/
-int lib_reflect(float *surface, float *vector, int n);
+int lib_floatReflect(int n);
+int lib_intReflect(int n);
 
 
 /*******************************

@@ -168,7 +168,7 @@ pid_t lib_shedReg(on_time_t new_task_pointer, int mod)
 	{
 		return FAILED_TO_CREATE_TASK;
 	}
-	new_task->mod = (mod >= 0 ? mod : 1);
+	new_task->mod = (mod > 0 ? mod : 1);
 	new_task->pid = pid_counter;
 	new_task->next_taask = NULL;
 	new_task->task = new_task_pointer;
@@ -265,7 +265,7 @@ __attribute__((__interrupt__)) static void lib_update_time(void)
 		// Run each of the tasks in the linked list. 
 		while (current != NULL)
 		{
-			if ((global_time % (current->mod) == 0))
+			if ((global_time % (current->mod ) == 0))
 			{
 				current->task(global_time);
 			}

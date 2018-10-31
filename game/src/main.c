@@ -41,6 +41,7 @@
 
 // include the games.
 #include "snake/snake.h"
+#include "games/pong.h"
 
 /*********************************
 * Function prototypes
@@ -88,7 +89,8 @@ int main (void)
 	lib_shedReg(test, 0);
 	*/
 	//snake_init();
-	
+	poing_init();
+		
 	
 	lib_timeOn();
 	while (1);
